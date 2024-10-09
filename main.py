@@ -15,7 +15,7 @@ def save_and_download_plot():
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
     buf.seek(0)
-    st.sidebar.download_button("Скачать график", buf, "graph.png", "image/png")
+    st.download_button("Скачать график", buf, "graph.png", "image/png")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file", type="csv")
 if uploaded_file is not None:
