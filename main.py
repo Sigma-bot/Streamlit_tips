@@ -39,7 +39,8 @@ if uploaded_file is not None:
         if page == "DataFrame":
             st.title("Наш датафрейм для исследований")
             st.write(tips)
-
+            st.write("Открывай sidebar, чтобы увидеть больше")
+            
         elif page == "Динамика чаевых во времени":
             dfex4 = tips.groupby('time_order')['tip'].sum().reset_index()
             plt.figure(figsize=(10, 6))
